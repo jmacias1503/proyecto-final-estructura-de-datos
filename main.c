@@ -13,8 +13,8 @@ void postOrder(struct Node *node){
   printf("Estamos en el nodo %d\n", node->value);
 }
 void insertNode(struct Node *node, char side, int value){
-  if(side == 'l') node->left = value;
-  if(side == 'r') node->right = value;
+  if(side == 'l') node->left->value = value;
+  if(side == 'r') node->right->value = value;
 }
 
 int main(){}
