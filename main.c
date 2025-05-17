@@ -10,7 +10,7 @@ void postOrder(struct Node *node){
   if (node == NULL) return;
   postOrder(node->left);
   postOrder(node->right);
-  printf("Estamos en el nodo %d", node->value);
+  printf("Estamos en el nodo %d\n", node->value);
 }
 void insertNode(struct Node *node, char side, int value){
   if(side == 'l') node->left = value;
