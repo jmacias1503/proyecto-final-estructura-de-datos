@@ -52,5 +52,3 @@ int main(){
   // Free the allocated memory
   free(root);
 }
-
-int main(){}
