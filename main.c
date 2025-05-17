@@ -33,6 +33,24 @@ void insert(struct Node *node, int value){
   }
 }
 int main(){
+  struct Node *root = malloc(sizeof(struct Node));
+  int nodeInput;
+  while(1){
+    printf("Introduce un valor para el arbol (0 para salir): ");
+    scanf("%d", &nodeInput);
+    if (nodeInput == 0) break;
+    if (root == NULL){
+      root->value = nodeInput;
+      root->left = NULL;
+      root->right = NULL;
+    } else {
+      insert(root, nodeInput);
+    }
+  }
+  printf("Recorrido postorden:\n");
+  postOrder(root);
+  // Free the allocated memory
+  free(root);
 }
 
 int main(){}
