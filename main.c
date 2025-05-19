@@ -32,6 +32,12 @@ void insert(struct Node *node, int value){
     }
   }
 }
+void freeTree(struct Node *root){
+  if (node == NULL) return;
+  postOrder(node->left);
+  postOrder(node->right);
+  free(root);
+}
 int main(){
   struct Node *root = malloc(sizeof(struct Node));
   int nodeInput;
@@ -49,6 +55,5 @@ int main(){
   }
   printf("Recorrido postorden:\n");
   postOrder(root);
-  // Free the allocated memory
-  free(root);
+  freeTree(root);
 }
