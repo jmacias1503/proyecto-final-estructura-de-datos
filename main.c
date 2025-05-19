@@ -32,11 +32,11 @@ void insert(struct Node *node, int value){
     }
   }
 }
-void freeTree(struct Node *root){
+void freeTree(struct Node *node){
   if (node == NULL) return;
   postOrder(node->left);
   postOrder(node->right);
-  free(root);
+  free(node);
 }
 int main(){
   struct Node *root = malloc(sizeof(struct Node));
