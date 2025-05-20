@@ -24,3 +24,7 @@ Realizar los proyectos que se exponen a continuación con sus respectivos protoc
 ### Formato de entrega
 - 1 carpeta con todos los entregables. La carpeta debe llevar por nombre "EQUIPO #" donde # es el número de equipo.
 - La carpeta debe contener un archivo llamado Integrantes.txt donde se enlisten los expedientes y nombres de los integrantes comenzando por apellidos.
+# Construcción y ejecución del proyecto
+```
+docker build -t estructura-datos && docker run -it --rm estructura-datos
+```
