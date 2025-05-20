@@ -34,8 +34,8 @@ void insert(struct Node *node, int value){
 }
 void freeTree(struct Node *node){
   if (node == NULL) return;
-  postOrder(node->left);
-  postOrder(node->right);
+  freeTree(node->left);
+  freeTree(node->right);
   free(node);
 }
 int main(){
